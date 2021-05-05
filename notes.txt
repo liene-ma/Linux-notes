@@ -54,3 +54,68 @@ ex
 sudo deluser --remove-all-files --backup --backup-to /user-backups username
 
 sudo su- (to go to root)
+
+Groups
+primary and secondary
+
+permissions on a file
+-|rw-|rw-|r--
+
+1) type
+2) permissions - read r, write w, execute x
+3) group permissions
+4) all other users
+
+one primary group, may be several secondary
+
+to remove permissions
+chmod o-r filename.txt (removes read permissions from others)
+
+Editing text
+Vi Improved
+VIM
+[i] insert mode
+[esc] command mode
+[:] Last Line mode
+:wq to quit
+vim filename
+use cursor arrows
+hjkl
+w = moves one word
+b = back one word
+0 = beginning of the line
+$ = end of the line
+G = end of the file
+gg = beginning of the file
+dd = delete line
+dw = delete a word
+u = undo last
+/<text> = looks for text
+n = forward
+:%s/text/replacement text/gc
+Last Line Commands
+:q = quit
+:q! = force quit
+:w = write (save)
+:wq = write then quit
+Precautions
+before editing make a copy
+cp /etc/ssh/sshd_config ~/
+cp sshd_config sshd_config.0
+diff sshd_config sshd_config.0 (to see what is different)
+
+Linux filesystem
+filesystem hierarchy standard
+man hier
+/etc directory is where system configuration files are
+/var -> /log | /syslog
+status of sessions
+many events
+where to install custom software -
+/opt - if small and self-contained
+Lynis
+sudo apt update - check if up to date
+sudo apt lynis
+sudo lynis --check-all
+
+
