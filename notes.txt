@@ -1,0 +1,56 @@
+Linux.
+
+Popular commands
+
+cat - concatenate what’s in a text file
+head - shows first 10 lines (-50 how many lines)
+tail - last ten lines
+pwd
+cd
+cd ~ - goes home
+ls - lists
+find
+grep
+more
+less
+touch
+
+tabs
+cd .. - one directory up
+cd ../.. two up and so on
+
+Absolute vs relative path
+
+Manage users
+ useradd
+Command that is universal
+useradd -d
+sudo useradd -d /home/dtrump -m dtrump
+(To add new user with home directory)
+sudo passwd dtrump
+enter password
+Other way - BETTER
+adduser
+sudo adduser name
+creates user, home dir, group, copying files, and asks for password
+Modify users
+usermod - command
+ex
+sudo usermod -aG sudo username
+To check if  username has sudo permissions
+su username
+sudo usermod -L username (to lock)
+
+/etc/passwd File
+/etc directory has a lot of files
+cat /etc/passwd to see what’s in the file
+/etc/shadow File
+Where passwords are stored
+Long strings with encrypted passwords
+Deleting users
+userdel
+deluser (better)
+ex
+sudo deluser --remove-all-files --backup --backup-to /user-backups username
+
+sudo su- (to go to root)
