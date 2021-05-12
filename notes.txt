@@ -22,6 +22,8 @@ cd ../.. two up and so on
 Absolute vs relative path
 
 Manage users
+to change between users use = su
+ex. = su lskywalker
  useradd
 Command that is universal
 useradd -d
@@ -69,7 +71,25 @@ permissions on a file
 one primary group, may be several secondary
 
 to remove permissions
+u = user
+g = group
+o = others
+= override
++ add
+- take away
+can do it with numbers
+4 = Read
+2 = Write
+1 = Execute
+rwx = 4 + 2 + 1 = 7
+rw- = 4 + 2 + 0 = 6
+r-x = 4 + 0 + 1 = 5
+r-- = 4 + 0 + 0 = 4
+-wx = 0 + 2 + 1 = 3
+-w- = 0 + 2 + 0 = 2
+--x = 0 + 0 + 1 = 1
 chmod o-r filename.txt (removes read permissions from others)
+chmod a-rwx filename.txt (will take away all permissions from all)
 
 Editing text
 Vi Improved
@@ -117,5 +137,42 @@ Lynis
 sudo apt update - check if up to date
 sudo apt lynis
 sudo lynis --check-all
+
+to rename
+use mv in the same dir - mv filename.txt filenewname.txt
+
+Find and locate
+* wildcard
+-user (to find files by user)
+-type (file, dir, socket, link)
+locate has less options
+otherwise similar syntax
+looks in database that is updated at midnight
+sudo updatedb (to update now)
+
+ssh keys
+to connect from iterm
+know ip address
+ip addr | grep inet
+ssh username @ ip address
+yes
+password
+and you're in
+
+grep
+to look for a particular word
+^beginning
+| pipe
+
+
+
+
+
+
+
+
+
+
+
 
 
